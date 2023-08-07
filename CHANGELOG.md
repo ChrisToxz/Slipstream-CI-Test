@@ -1,5 +1,7 @@
 
 
+## 0.4.1 (2023-08-07)
+
 ## [0.4.0](https://github.com/christoxz/slipstream-core/compare/0.3.0...0.4.0) (2023-07-12)
 
 
