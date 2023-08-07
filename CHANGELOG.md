@@ -1,5 +1,7 @@
 
 
+## [0.5.1](https://github.com/ChrisToxz/Slipstream-CI-Test/compare/0.5.0...0.5.1) (2023-08-07)
+
 ## [0.5.0](https://github.com/ChrisToxz/Slipstream-CI-Test/compare/0.4.1...0.5.0) (2023-08-07)
 
 ## 0.4.1 (2023-08-07)
