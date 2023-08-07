@@ -1,6 +1,7 @@
 name: Build and push image to Docker hub
 
 on:
+  workflow_dispatch:
   release:
     branches: [ master ]
     types: [ published ]
