@@ -1,0 +1,39 @@
+version: '3.8'
+name: slipstream
+
+services:
+    app:
+        container_name: Slipstream
+        image: slipstream:latest
+        ports:
+            - 80:80
+            - 6001:6001 # Websockets
+        depends_on:
+            - db
+        environment:
+            DB_HOST: slipstream-db
+#            DB_PASSWORD: yoursecretdbpass
+        networks:
+            - slipstream_network
+
+    db:
+        image: mysql:8
+        container_name: slipstream-db
+        restart: unless-stopped
+        ports:
+            - "3306:3306"
+        environment:
+            MYSQL_DATABASE: slipstream
+            MYSQL_ROOT_PASSWORD: yoursecretdbpass
+        volumes:
+            - dbdata:/var/lib/mysql/
+        networks:
+            - slipstream_network
+
+volumes:
+    dbdata:
+
+networks:
+    slipstream_network:
+        driver: bridge
+
