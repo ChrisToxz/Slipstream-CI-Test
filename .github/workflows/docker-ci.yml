@@ -53,4 +53,4 @@ jobs:
       - run: echo "The workflow is now ready to test your code on the runner."
       - run: echo "This job's status is ${{ job.status }}."
       - run: echo "Github data ${{ toJson(github) }}."
-      - run: echo "Github metadata ${{ toJsonsteps.meta.outputs) }}."
+      - run: echo "Github metadata ${{ toJson(steps.meta.outputs) }}."
