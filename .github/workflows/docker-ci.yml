@@ -52,5 +52,5 @@ jobs:
       - run: echo "The ${{ github.repository }} repository have been build and pushed to DockerHub."
       - run: echo "The workflow is now ready to test your code on the runner."
       - run: echo "This job's status is ${{ job.status }}."
-      - run: echo "Github data ${{ github }}."
-      - run: echo "Github metadata ${{ steps.meta.outputs }}."
+      - run: echo "Github data ${{ toJson(github) }}."
+      - run: echo "Github metadata ${{ toJsonsteps.meta.outputs) }}."
