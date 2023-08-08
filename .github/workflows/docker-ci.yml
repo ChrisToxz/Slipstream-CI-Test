@@ -11,6 +11,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - run: echo "The job was triggered by a ${{ github.event_name }} event."
+      
       - name: Checkout repository
         uses: actions/checkout@v3
 
@@ -45,3 +47,10 @@ jobs:
           push: true
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
+
+
+      - run: echo "The ${{ github.repository }} repository have been build and pushed to DockerHub."
+      - run: echo "The workflow is now ready to test your code on the runner."
+      - run: echo "This job's status is ${{ job.status }}."
+      - run: echo "Github data ${{ github }}."
+      - run: echo "Github metadata ${{ steps.meta.outputs }}."
